@@ -1,0 +1,26 @@
+
+
+Gilbert
+ - decay: what weight is applied to the embeddings?  
+	Higher weight is effectively a decay on history of cooccurrences.
+	Higher weight also gives faster response to change in demand.
+ - serendipity: increase the temperature on the
+	distributions, thereby being
+	more random.  Increases entropy in recommendation dist.
+ - referrel: roll a die to decide whether to surrogate preferences from someone
+	in the vacinity of the user.  (like serendipity, referrel also increases
+	entropy in the recommendation distribution) 
+
+
+TODO: 
+ - rationalize sparse storage format choice.
+
+- make object graph into an accumulator instead of a dict.
+
+- How to handle ratings
+	- need a way to express a weighted pairs
+	- for sample-based algos, need a way to sample weighted pairs.
+	- might make sense for star-ratings to be treated like logNxx
+	- for both sample-based and linalg solvers, need a way to handle missing
+	  ratings (e.g. can't positive sample, so don't negative sample either)
+

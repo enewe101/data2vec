@@ -1,0 +1,45 @@
+d2v_id
+ - validate_id
+ - validate_primitive_id
+ - validate_non_primitive_id
+ - validate_field
+ - validate_type
+ - unordered_pair
+ - is_primitive
+ - as_list
+
+ x validate
+ x split_id
+ x join_id
+ x get_non_primitive_id
+ x get_child_ids
+ x normalize
+ x tokenize
+
+
+graph
+ - read_object_graph	|
+ - write_object_graph	| conflict!
+ - index_graph
+ - graph_to_csr
+
+ x get_index
+
+
+ingestion
+ - ingest
+ - tally
+ - make_pairs_and_expanded_graph
+ - recursively_expand
+
+pairlist
+ - write_pairlist
+ - read_pairlist
+ - pairlist_to_coo
+
+dictionary
+ - read_dictionary(path):
+ - write_dictionary(path, dictionary):
+ - Dictionary(dict):
+
+
